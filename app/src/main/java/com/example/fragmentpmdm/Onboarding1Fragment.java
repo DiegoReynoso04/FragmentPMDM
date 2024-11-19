@@ -15,7 +15,7 @@ import android.widget.Button;
 
 public class Onboarding1Fragment extends Fragment {
 
-    Button botonSiguiente;
+    Button botonSiguiente, botonSkip;
     NavController navController;
 
     @Override
@@ -30,12 +30,20 @@ public class Onboarding1Fragment extends Fragment {
 
         navController = Navigation.findNavController(view);
 
-        botonSiguiente = view.findViewById(R.id.botonSiguiente);
+        botonSiguiente = view.findViewById(R.id.botonContinue);
+        botonSkip = view.findViewById(R.id.botonSkip);
 
         botonSiguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 navController.navigate(R.id.action_onboarding1Fragment_to_onboarding2Fragment);
+            }
+        });
+
+        botonSkip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_onboarding1Fragment_to_homeFragment);
             }
         });
     }

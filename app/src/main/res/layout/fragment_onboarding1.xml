@@ -26,19 +26,29 @@
         android:text="¡Discover the garlic soup!"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/botonSiguiente"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imagen" />
 
     <Button
-        android:id="@+id/botonSiguiente"
+        android:id="@+id/botonContinue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FFEB3B"
-        android:text="Next"
-        app:layout_constraintTop_toBottomOf="@id/texto"
+        android:backgroundTint="#FFC107"
+        android:text="Continue"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/texto" />
+
+    <Button
+        android:id="@+id/botonSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#FF5722"
+        android:text="Skip"
+        app:layout_constraintBottom_toTopOf="@id/botonContinue"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
